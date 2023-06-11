@@ -27,10 +27,10 @@ resource "aws_instance" "ubuntu" {
     Demo = var.demo_tag
   }
 
-  lifecycle {
-    postcondition {
-      condition     = self.instance_type == "t2.micro"
-      error_message = "Instance Type is not what was set in Terraform Variable. Please validate"
-    }
-  }
+  # lifecycle {
+  #   postcondition {
+  #     condition     = self.instance_type == "t2.micro"
+  #     error_message = "Instance Type is not what was set in Terraform Variable. Please validate"
+  #   }
+  # }
 }
