@@ -26,4 +26,11 @@ resource "aws_instance" "ubuntu" {
     Name = var.instance_name
     Demo = var.demo_tag
   }
+
+  lifecycle {
+    postcondition {
+      condition = self.instance_type == var.instance_type
+      error_message = "Instance Type is not what was set in Terraform Variable. Please validate"
+    }
+  }
 }
