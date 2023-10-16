@@ -25,7 +25,7 @@ resource "aws_instance" "ubuntu" {
   tags = {
     Name = var.instance_name
     Demo = var.demo_tag
-    Test = "deployments"
+    Test = "DEECA-Demo"
   }
 
   # lifecycle {
