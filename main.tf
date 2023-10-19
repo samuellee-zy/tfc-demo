@@ -36,16 +36,3 @@ resource "aws_instance" "ubuntu" {
   # }
 }
 
-# module "s3-webapp" {
-#   source  = "app.terraform.io/samuellee-dev/s3-webapp/aws"
-#   version = "4.0.1"
-#   # insert required variables here
-#   name = "sam"
-#   prefix = "sam-demo"
-#   region = "ap-southeast-2"
-# }
-
-module "s3-bucket_example_complete" {
-  source  = "terraform-aws-modules/s3-bucket/aws//examples/complete"
-  version = "3.15.1"
-}
