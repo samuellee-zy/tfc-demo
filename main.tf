@@ -35,3 +35,12 @@ resource "aws_instance" "ubuntu" {
   #   }
   # }
 }
+
+module "s3-webapp" {
+  source  = "app.terraform.io/samuellee-dev/s3-webapp/aws"
+  version = "4.0.1"
+  # insert required variables here
+  name = "sam"
+  prefix = "sam-demo"
+  region = "ap-southeast-2"
+}
