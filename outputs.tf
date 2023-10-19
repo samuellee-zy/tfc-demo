@@ -9,7 +9,3 @@ output "instance_arn" {
 output "instance_name" {
   value = var.instance_name
 }
-
-output "s3_bucket_website_endpoint" {
-  value = module.s3-bucket_example_complete.s3_bucket_website_endpoint
-}
